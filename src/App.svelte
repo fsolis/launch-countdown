@@ -13,12 +13,10 @@
 
   main {
     text-align: center;
-    padding: 1rem;
     margin: 0 auto;
     background-image: linear-gradient(to bottom, $dark-blue, $blue);
     color: $white;
-    width: calc(100% - 2rem);
-    height: calc(100% - 2rem);
+    height: 100%;
     position: relative;
 
     &:after {

@@ -1,17 +1,44 @@
 <footer class="attribution">
-  <div>
-    Challenge by <a
-      href="https://www.frontendmentor.io?ref=challenge"
-      target="_blank">Frontend Mentor</a
-    >. Coded by <a href="https://github.com/fsolis">Freddy Solis</a>.
+  <div class="footer">
+    <img
+      class="footer__img"
+      src="../assets/icon-facebook.svg"
+      alt="Facebook icon"
+    />
+    <img
+      class="footer__img"
+      src="../assets/icon-instagram.svg"
+      alt="Instagram icon"
+    />
+    <img
+      class="footer__img"
+      src="../assets/icon-pinterest.svg"
+      alt="Pinterest icon"
+    />
   </div>
 </footer>
 
 <style type="text/scss">
   footer {
-    height: 50px;
+    background: no-repeat url("../assets/pattern-hills.svg");
+    background-size: cover;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .footer {
+    margin-top: 3rem;
+
+    &__img {
+      height: 30px;
+      width: 30px;
+      margin-right: 3rem;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
   }
 </style>
