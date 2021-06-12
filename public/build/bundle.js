@@ -343,8 +343,9 @@ var app = (function () {
     			main = element("main");
     			h1 = element("h1");
     			h1.textContent = "We're launching soon";
-    			t1 = text("\n\n  Days\n  Hours\n  Minutes\n  Seconds");
-    			add_location(h1, file$2, 1, 4, 11);
+    			t1 = text("\n\n  Days Hours Minutes Seconds");
+    			add_location(h1, file$2, 1, 2, 9);
+    			attr_dev(main, "class", "svelte-1har9jn");
     			add_location(main, file$2, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -405,6 +406,7 @@ var app = (function () {
     const file$1 = "src/components/Footer.svelte";
 
     function create_fragment$1(ctx) {
+    	let footer;
     	let div;
     	let t0;
     	let a0;
@@ -414,27 +416,30 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			footer = element("footer");
     			div = element("div");
     			t0 = text("Challenge by ");
     			a0 = element("a");
     			a0.textContent = "Frontend Mentor";
-    			t2 = text(". \n    Coded by ");
+    			t2 = text(". Coded by ");
     			a1 = element("a");
-    			a1.textContent = "Your Name Here";
+    			a1.textContent = "Freddy Solis";
     			t4 = text(".");
     			attr_dev(a0, "href", "https://www.frontendmentor.io?ref=challenge");
     			attr_dev(a0, "target", "_blank");
-    			add_location(a0, file$1, 1, 17, 43);
-    			attr_dev(a1, "href", "#");
-    			add_location(a1, file$1, 2, 13, 148);
-    			attr_dev(div, "class", "attribution");
-    			add_location(div, file$1, 0, 0, 0);
+    			add_location(a0, file$1, 2, 17, 54);
+    			attr_dev(a1, "href", "https://github.com/fsolis");
+    			add_location(a1, file$1, 5, 16, 171);
+    			add_location(div, file$1, 1, 2, 31);
+    			attr_dev(footer, "class", "attribution svelte-1dvt4gr");
+    			add_location(footer, file$1, 0, 0, 0);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
+    			insert_dev(target, footer, anchor);
+    			append_dev(footer, div);
     			append_dev(div, t0);
     			append_dev(div, a0);
     			append_dev(div, t2);
@@ -445,7 +450,7 @@ var app = (function () {
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(footer);
     		}
     	};
 
@@ -504,7 +509,7 @@ var app = (function () {
     			create_component(main0.$$.fragment);
     			t = space();
     			create_component(footer.$$.fragment);
-    			attr_dev(main1, "class", "svelte-1burr37");
+    			attr_dev(main1, "class", "svelte-1l9zut1");
     			add_location(main1, file, 4, 0, 123);
     		},
     		l: function claim(nodes) {
@@ -576,9 +581,7 @@ var app = (function () {
 
     const app = new App({
         target: document.body,
-        props: {
-            name: 'world'
-        }
+        props: {}
     });
 
     return app;
