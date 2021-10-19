@@ -2,16 +2,16 @@
   import Countdown from "./Countdown.svelte";
 </script>
 
-<main>
+<div class="main-container">
   <h1 class="title">We're launching soon</h1>
 
   <div class="clock">
     <Countdown />
   </div>
-</main>
+</div>
 
 <style type="text/scss">
-  main {
+  .main-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
